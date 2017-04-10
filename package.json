@@ -2,8 +2,12 @@
     "name": "latex-formatter",
     "displayName": "latex-formatter",
     "description": "",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "nickfode",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nfode/latex-formatter"
+    },
     "engines": {
         "vscode": "^1.10.0"
     },
@@ -11,8 +15,7 @@
         "Other"
     ],
     "activationEvents": [
-        "onLanguage:latex",
-        "onCommand:extension.sayHello"
+        "onLanguage:latex"
     ],
     "main": "./out/src/extension",
     "contributes": {
