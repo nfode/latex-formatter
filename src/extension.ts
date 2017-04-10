@@ -11,7 +11,6 @@ export class LaTexFormatter {
     public formatDocument(document: vscode.TextDocument): Thenable<vscode.TextEdit[]> {
         return new Promise((resolve, reject) => {
             let filename = document.fileName;
-            console.log(filename);
             var edit = null;
             cp.exec('latexindent ' + filename, (err, stdout, stderr) => {
                 edit = [vscode.TextEdit.replace(fullRange(document), stdout)];

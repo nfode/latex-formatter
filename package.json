@@ -1,8 +1,8 @@
 {
     "name": "latex-formatter",
     "displayName": "latex-formatter",
-    "description": "",
-    "version": "1.0.0",
+    "description": "Simple LaTex formatter.",
+    "version": "1.0.1",
     "publisher": "nickfode",
     "repository": {
         "type": "git",
