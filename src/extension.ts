@@ -3,6 +3,7 @@
 import * as vscode from 'vscode';
 import cp = require('child_process');
 import path = require('path');
+import os = require('os');
 
 const fullRange = doc => doc.validateRange(new vscode.Range(0, 0, Number.MAX_VALUE, Number.MAX_VALUE));
 const LATEX_MODE: vscode.DocumentFilter = { language: 'latex', scheme: 'file' };
@@ -10,9 +11,17 @@ const LATEX_MODE: vscode.DocumentFilter = { language: 'latex', scheme: 'file' };
 export class LaTexFormatter {
     public formatDocument(document: vscode.TextDocument): Thenable<vscode.TextEdit[]> {
         return new Promise((resolve, reject) => {
+            let formatter = 'latexindent';
+            let windows_os = 'Windows_NT';
+            let machine_os = os.type.toString();
+            let exe = '.exe';
+            if(machine_os == windows_os){
+                formatter += exe;
+            }
+
             let filename = document.fileName;
             var edit = null;
-            cp.exec('latexindent ' + filename, (err, stdout, stderr) => {
+            cp.exec(formatter + filename, (err, stdout, stderr) => {
                 edit = [vscode.TextEdit.replace(fullRange(document), stdout)];
                 return resolve(edit);
             });

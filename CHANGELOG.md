@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to the "latex-formatter" extension will be documented in this file.
 
+## 1.0.2 - 2017-04-10
+### Added
+- Icon
 ## 1.0.1 - 2017-04-10
 ### Added
 - GIF with Example
