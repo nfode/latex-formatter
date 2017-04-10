@@ -13,7 +13,7 @@ export class LaTexFormatter {
             let formatter = 'latexindent';
             let filename = document.fileName;
 
-            cp.exec(formatter + filename, (err, stdout, stderr) => {
+            cp.exec(formatter +' '+ filename, (err, stdout, stderr) => {
                 var edit = [vscode.TextEdit.replace(fullRange(document), stdout)];
                 return resolve(edit);
             });
