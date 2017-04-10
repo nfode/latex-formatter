@@ -11,11 +11,10 @@ export class LaTexFormatter {
     public formatDocument(document: vscode.TextDocument): Thenable<vscode.TextEdit[]> {
         return new Promise((resolve, reject) => {
             let formatter = 'latexindent';
-
             let filename = document.fileName;
-            var edit = null;
+
             cp.exec(formatter + filename, (err, stdout, stderr) => {
-                edit = [vscode.TextEdit.replace(fullRange(document), stdout)];
+                var edit = [vscode.TextEdit.replace(fullRange(document), stdout)];
                 return resolve(edit);
             });
 
