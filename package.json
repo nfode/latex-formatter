@@ -2,6 +2,7 @@
     "name": "latex-formatter",
     "displayName": "latex-formatter",
     "description": "Simple LaTex formatter.",
+    "icon": "img/icon.svg",
     "version": "1.0.1",
     "publisher": "nickfode",
     "repository": {
@@ -12,7 +13,7 @@
         "vscode": "^1.10.0"
     },
     "categories": [
-        "Other"
+        "latex","tex","formatter","beautify"
     ],
     "activationEvents": [
         "onLanguage:latex"
