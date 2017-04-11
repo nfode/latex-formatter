@@ -19,7 +19,7 @@ export class OperatingSystem {
         this.checker = checker;
     }
 }
-const windows: OperatingSystem = new OperatingSystem('windows', '.exe', 'where');
+const windows: OperatingSystem = new OperatingSystem('win32', '.exe', 'where');
 const linux: OperatingSystem = new OperatingSystem('linux', '.pl', 'which');
 
 export class LaTexFormatter {
@@ -28,6 +28,7 @@ export class LaTexFormatter {
     private formatter: string;
     constructor() {
         this.machine_os = os.platform();
+        console.log(this.machine_os);
         this.formatter = 'latexindent';
     }
     public formatDocument(document: vscode.TextDocument): Thenable<vscode.TextEdit[]> {
