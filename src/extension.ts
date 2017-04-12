@@ -35,14 +35,15 @@ export class LaTexFormatter {
             let filename = document.fileName;
             if (this.machine_os == windows.name) {
                 this.current_os = windows;
-            }
-            if (this.machine_os == linux.name) {
+            } else if (this.machine_os == linux.name) {
                 this.current_os = linux;
+            } else {
+                showErrorMessage('Your os is not supported!')
             }
 
             this.checkPath(this.current_os.checker).then((res) => {
                 if (!res) {
-                    showErrorMessage();
+                    showErrorMessage('Can not find latexindent in PATH!');
                     return resolve(null);
                 }
                 this.format(filename, document).then((res) => {
@@ -66,7 +67,7 @@ export class LaTexFormatter {
         })
 
     }
-    private format(filename:string, document: vscode.TextDocument): Thenable<vscode.TextEdit[]> {
+    private format(filename: string, document: vscode.TextDocument): Thenable<vscode.TextEdit[]> {
         return new Promise((resolve, reject) => {
             cp.exec(this.formatter + ' ' + filename, (err, stdout, stderr) => {
                 if (stdout != '') {
@@ -80,8 +81,8 @@ export class LaTexFormatter {
     }
 }
 
-function showErrorMessage() {
-    vscode.window.showErrorMessage('Can not find latexindent in PATH!');
+function showErrorMessage(msg:string) {
+    vscode.window.showErrorMessage(msg);
 }
 
 class LaTexDocumentRangeFormatter implements vscode.DocumentFormattingEditProvider {
@@ -102,9 +103,8 @@ class LaTexDocumentRangeFormatter implements vscode.DocumentFormattingEditProvid
 }
 
 export function activate(context: vscode.ExtensionContext) {
-    channel = vscode.window.createOutputChannel("latex-formatter");
+    channel = vscode.window.createOutputChannel('latex-formatter');
 
-    //vscode.window.showInformationMessage('test');
     context.subscriptions.push(
         vscode.languages.registerDocumentFormattingEditProvider(
             LATEX_MODE, new LaTexDocumentRangeFormatter()));
