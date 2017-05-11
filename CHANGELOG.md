@@ -1,13 +1,20 @@
 # Change Log
 All notable changes to the "latex-formatter" extension will be documented in this file.
 
+## 1.0.4 - 2017-05-11
+### Added
+- macOs - Support
+
+## 1.0.3 - 2017-04-13
+
+### Changed
+- fixed typos in readme
 
 ## 1.0.2 - 2017-04-12
 ### Added
 - Icon
 - Windows support
-### Changed
-- Added installation guide to Readme
+- Installation guide in Readme
 
 ## 1.0.1 - 2017-04-10
 ### Added

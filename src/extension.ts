@@ -21,6 +21,7 @@ export class OperatingSystem {
 }
 const windows: OperatingSystem = new OperatingSystem('win32', '.exe', 'where');
 const linux: OperatingSystem = new OperatingSystem('linux', '.pl', 'which');
+const mac: OperatingSystem = new OperatingSystem('darwin', '.pl', 'which');
 
 export class LaTexFormatter {
     private machine_os: string;
@@ -40,8 +41,8 @@ export class LaTexFormatter {
                 this.current_os = windows;
             } else if (this.machine_os == linux.name) {
                 this.current_os = linux;
-            } else {
-                showErrorMessage('Your os is not supported!')
+            }  else if (this.machine_os == mac.name) {
+                this.current_os = mac;
             }
 
             this.checkPath(this.current_os.checker).then((res) => {

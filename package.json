@@ -3,7 +3,7 @@
     "displayName": "latex-formatter",
     "description": "Simple LaTex formatter.",
     "icon": "img/icon.svg",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "publisher": "nickfode",
     "repository": {
         "type": "git",
@@ -13,7 +13,8 @@
         "vscode": "^1.10.0"
     },
     "categories": [
-        "latex","tex","formatter","beautify"
+        "Other",
+        "Formatters"
     ],
     "activationEvents": [
         "onLanguage:latex"

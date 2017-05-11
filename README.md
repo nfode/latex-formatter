@@ -18,13 +18,13 @@ For MiKTeX and TeXLive is a package available.
 
 *****
 
-Reference for the following guides: [latexindent.pl - Dokumentation](https://github.com/cmhughes/latexindent.pl/tree/master/documentation)
+Reference for the following guides: [latexindent.pl - Documentation](https://github.com/cmhughes/latexindent.pl/tree/master/documentation)
 ### Windows
 1. go to [latexindent.pl](https://github.com/cmhughes/latexindent.pl) and download *latexindent.exe*, *defaultSettings.yaml*, *add-to-path.bat* to the directory where you want to have **latexindent**.
 2. right click on *add-to-path.bat* and click *Run as administrator*.
 3. log out and lock back in
 4. open a command prompt type the following and hit enter
-    ```
+    ```bash
     echo %path%
     ``` 
     to check if **latexindent** is now in your **PATH**
@@ -33,7 +33,7 @@ Reference for the following guides: [latexindent.pl - Dokumentation](https://git
 1. go to [latexindent.pl](https://github.com/cmhughes/latexindent.pl) and download *latexindent.pl*, *defaultSettings.yaml* the directory where you want to have **latexindent**.
 2. within your directory create a directory called *path-helper-files* and download *CMakeLists.txt* and *cmake_uninstall.cmake.in* from the folder *path-helper-files* to this directory
 3. run the following commands
-    ```
+    ```bash
     sudo apt-get install cmake
     sudo apt-get update && sudo apt-get install build-essential
     mkdir build && cd build
@@ -41,7 +41,7 @@ Reference for the following guides: [latexindent.pl - Dokumentation](https://git
     sudo make install
     ```
 4. run
-    ```
+    ```bash
     which latexindent.pl
     ```
     to check if **latexindent** was correctly installed
