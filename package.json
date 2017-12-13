@@ -4,7 +4,7 @@
     "description": "Simple LaTex formatter.",
     "icon": "img/icon.svg",
     "version": "1.0.5",
-    "publisher": "nickfode",
+    "publisher": "nfode",
     "repository": {
         "type": "git",
         "url": "https://github.com/nfode/latex-formatter"
@@ -31,13 +31,7 @@
         ],
         "capabilities": {
             "documentFormattingProvider": "true"
-        },
-        "commands": [
-            {
-                "command": "extension.sayHello",
-                "title": "Hello World"
-            }
-        ]
+        }
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
@@ -47,9 +41,9 @@
     },
     "devDependencies": {
         "typescript": "^2.0.3",
-        "vscode": "^1.0.0",
-        "mocha": "^2.3.3",
-        "@types/node": "^6.0.40",
+        "vscode": "^1.5.0",
+        "mocha": "^4.0.0",
+        "@types/node": "^8.0.0",
         "@types/mocha": "^2.2.32"
     }
 }

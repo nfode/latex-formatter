@@ -5,5 +5,25 @@
     },
     "search.exclude": {
         "out": true // set this to false to include "out" folder in search results
-    }
+    },
+    "cSpell.language": "en,en-GB,en-US",
+    "cSpell.enabledLanguageIds": [
+        "c",
+        "cpp",
+        "csharp",
+        "go",
+        "handlebars",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "latex",
+        "markdown",
+        "php",
+        "plaintext",
+        "python",
+        "restructuredtext",
+        "text",
+        "typescriptreact",
+        "yml"
+    ]
 }
