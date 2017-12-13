@@ -5,28 +5,15 @@
 
 LaTex-Formatter is a simple VSCode tool for the LaTex - Language
 
-## Table of Contents
-
-* [Requirements](#requirements)
-* [Installation guide](#installation-guide)
-  * [TexDistro - Package manager](#texdistro---package-manager)
-  * [Windows](#windows)
-  * [Linux](#linux)
-* [Release Notes](#release-notes)
-  * [1.0.5](#105)
-  * [1.0.4](#104)
-* [Roadmap](#roadmap)
-
 ![Example](img/format_example.gif)
 
+## Installation
 
-## Installation guide
-
-### Installing via a Package Manager
+### Package Manager
 
 For MiKTeX and TeXLive there is a package available.
 
-### Installing Manually
+### Manually
 
 > Reference for the following guide: [latexindent.pl - Documentation](https://github.com/cmhughes/latexindent.pl/tree/master/documentation)
 
