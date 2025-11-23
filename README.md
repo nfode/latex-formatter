@@ -1,3 +1,4 @@
+> Since the plugin is outdated and I do not work with LaTex anymore I archived this repository. Feel free to fork.
 
 # latex-formatter README
 
